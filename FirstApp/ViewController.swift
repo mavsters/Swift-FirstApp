@@ -9,12 +9,27 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var lbltext: UILabel!
+    
+    @IBOutlet weak var txtpalabra: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+     }
+    
+    
+    @IBAction func btnfuncion(_ sender: Any) {
+        var word = txtpalabra.text
+        if(txtpalabra.text?.isEmpty == true){
+       lbltext.text =  word
+        }else{
+            lbltext.text =  "Ingrese Texto"
+        }
+        
+        
+        
     }
-
-
 }
 
